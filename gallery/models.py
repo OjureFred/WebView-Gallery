@@ -8,7 +8,7 @@ class categories(models.Model):
         return self.category_name
 
 class Location(models.Model):
-    location_name = models.CharField(max_length=50)
+    location_name = models.CharField(max_length=50, default='unknown')
 
     def __str__(self):
         return self.location_name
