@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to Fred\'s Gallery')
+    return render( request, 'welcome.html')
 
 def picture_category(request):
     html = f'''
