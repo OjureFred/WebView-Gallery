@@ -1,6 +1,6 @@
-# Django Portfolio Web Site
+# Web View Gallery Web Site
 
-This is a Python Django Project that list all projects I have done and pushed to Github and Heroku Cloud
+This is a Python Django Project that serves as a gallery for my pictures
 
 ## Getting Started
 
@@ -62,7 +62,7 @@ To deploy, follow these steps:
 
 1. Clone from the repository to your local drive.
 2. Install Django. You can follow the steps in https://timmyreilly.azurewebsites.net/python-flask-windows-development-environment-setup/
-3. Activate Flask environmet
+3. Activate the virtual environmet
 4. Install Twitter Bootstrap, Google Fonts, Coolers 
 
 ## Built With
