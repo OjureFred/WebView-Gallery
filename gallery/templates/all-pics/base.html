@@ -11,6 +11,10 @@
     <title> Fred Ojure's Picture Gallery </title>
   {% endif %}
 
+  {% block styles %}
+  {% bootstrap_css %}
+  {% endblock %}
+
 </head>
 <body>
   {% include 'navbar.html' %}
