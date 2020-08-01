@@ -2,4 +2,13 @@
 
 {% block content %}
 {{block.super}}
+
+<h3>Picture Categories</h3>
+<ul>
+{% for category in pic_categories %}
+<li><h4>{{category.category_name}}</h4></li>
+{% endfor %}
+</ul>
+{{latest_gallery.image_name}}
+<img src="{{latest_gallery.image}}"
 {% endblock %}

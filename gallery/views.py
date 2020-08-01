@@ -1,10 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, Http404
 import datetime as dt
+from .models import Gallery, Location, categories
 
 # Create your views here.
 def welcome(request):
-    return render( request, 'welcome.html')
+    pic_categories = categories.objects.all()
+    latest_gallery = Gallery.objects.get(pk = 1)
+    return render( request, 'welcome.html', {"pic_categories": pic_categories, "latest_gallery": latest_gallery})
 
 def picture_category(request):
     date = dt.date.today()
