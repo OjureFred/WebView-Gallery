@@ -18,3 +18,16 @@ def picture_location(request):
     date = dt.date.today()
     return render(request, 'all-pics/location-pics.html', {"date": date,})
 
+def search_results(request):
+
+    if 'location' in request.GET and request.GET["location"]:
+        search_term = request.GET.get("location")
+        searched_location = Gallery.search_by_location(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'all-pics/location.html', {"message": message, "pictures": searched_location})
+    
+    else:
+        message = "You haven't searched for any location"
+        return render(request, 'all-pics/location.html', { "message": message})
+

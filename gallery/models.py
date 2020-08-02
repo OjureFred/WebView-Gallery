@@ -30,5 +30,9 @@ class Gallery(models.Model):
     def save_gallery(self):
         self.save()
     
+    @classmethod
+    def search_by_location(cls, search_term):
+        pictures = cls.objects.filter(location__icontains=search_term)
+        return pictures
     class Meta:
         ordering = ['image_name']
