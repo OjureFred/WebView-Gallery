@@ -25,9 +25,9 @@ def search_results(request):
         searched_location = Gallery.search_by_location(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-pics/location.html', {"message": message, "pictures": searched_location})
+        return render(request, 'all-pics/location-pics.html', {"message": message, "pictures": searched_location})
     
     else:
         message = "You haven't searched for any location"
-        return render(request, 'all-pics/location.html', { "message": message})
+        return render(request, 'all-pics/location-pics.html', { "message": message})
 

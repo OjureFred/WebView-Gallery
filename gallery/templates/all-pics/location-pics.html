@@ -1,5 +1,26 @@
 {%extends 'all-pics/base.html'%}
 
 {% block content %}
-{{block.super}}
+<div class="container">
+
+    <div class="row">
+        {% if pictures %}
+        <h2>Found {{ pictures|length }} pictures of searched location {{message}}</h2>
+        {% else %}
+        <h2> Found 0 pictures of the location: {{message}}</h2>
+        {% endif %}
+    </div>
+
+    <div class="row">
+        {% for picture in pictures %}
+        <div class="col-sm-6 col-md-6">
+            <h1>{{picture.image_name}}</h1>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+        
+    </div>
+
+
 {% endblock %}
