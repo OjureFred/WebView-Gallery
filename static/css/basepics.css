@@ -5,12 +5,14 @@ h1 {
 
 button {
     padding: 20px;
-    width: 60px;
+    width: 100px;
+    border-radius: 30px;
 }
 
 .btn-group button {
     background-color: #4CAF50; /* Green background */
     border: 1px solid green; /* Green border */
+    margin: 30px;
     color: white; /* White text */
     padding: 25px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
