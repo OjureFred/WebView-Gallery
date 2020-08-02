@@ -1,20 +1,22 @@
 h1 {
-    color: yellow;
-    background-color: bisque;
+   color: indianred;
+   background-color: bisque;
 }
 
 button {
-    padding: 20px;
-    width: 100px;
-    border-radius: 30px;
+   padding: 20px;
+   width: 150px;
+   text-align: center;
+   border-radius: 30px;
+   background-color: blue;
 }
 
 .btn-group button {
-    background-color: #4CAF50; /* Green background */
-    border: 1px solid green; /* Green border */
-    margin: 30px;
-    color: white; /* White text */
-    padding: 25px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-  }
+   background-color: beige; /* Green background */
+   border: 1px solid blue; /* Green border */
+   margin: 30px;
+   color: black; /* White text */
+   padding: 25px 24px; /* Some padding */
+   cursor: pointer; /* Pointer/hand icon */
+   float: left; /* Float the buttons side by side */
+}
