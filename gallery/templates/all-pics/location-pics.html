@@ -12,6 +12,7 @@
     </div>
 
     <div class="row">
+        {% if pictures %}
         {% for picture in pictures %}
         <div class="col-sm-6 col-md-6">
             <h1>{{picture.image_name}}</h1>
