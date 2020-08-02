@@ -29,5 +29,6 @@ class Gallery(models.Model):
     
     def save_gallery(self):
         self.save()
+    
     class Meta:
         ordering = ['image_name']
