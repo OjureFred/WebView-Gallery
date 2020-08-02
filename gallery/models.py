@@ -19,7 +19,7 @@ class Location(models.Model):
 class Gallery(models.Model):
     image_name = models.CharField(max_length=50)
     image_description = models.TextField()
-    image = models.ImageField(upload_to = 'pictures/', blank=True)
+    image = models.ImageField(upload_to = 'pictures/')
     location = models.ForeignKey(Location, default='unknown', on_delete = models.DO_NOTHING)
     categories = models.ManyToManyField(categories)
     save_date = models.DateTimeField(auto_now_add=True)

@@ -10,13 +10,17 @@
    </button>
 
    {% endfor %}
+
 </div>
+
 <div class="container">
    {% for pic in all_gallery %} {{pic.image_name}}
-   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card"></div>
+   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
+   {% if pic.image %}
    <img src="{{pic.image.url}}" alt="{{pic.image_name}} poster" class="img-responsive" />
+   {% endif %}
    <li class="text-center">
-      <a href="">{{pic.image_name}}</a>
+      <p></p>{{pic.image_name}}</p>
       <p>Description:{{pic.immage_description}}</p>
       <p>Location: {{pic.location}}</p>
    </li>
