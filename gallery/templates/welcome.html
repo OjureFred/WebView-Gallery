@@ -14,11 +14,11 @@
 <div class="container">
    {% for pic in all_gallery %} {{pic.image_name}}
    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card"></div>
-   <img src="{{pic.image}}" alt="{{pic.image_name}} poster" class="img-responsive" />
+   <img src="{{pic.image.url}}" alt="{{pic.image_name}} poster" class="img-responsive" />
    <li class="text-center">
       <a href="">{{pic.image_name}}</a>
       <p>Description:{{pic.immage_description}}</p>
-      <p>Location: {{pic.image_location}}</p>
+      <p>Location: {{pic.location}}</p>
    </li>
    </div>
    {% endfor%}
