@@ -1,5 +1,5 @@
 h1 {
-    color: indigo;
+    color: yellow;
     background-color: bisque;
 }
 
@@ -7,3 +7,12 @@ button {
     padding: 20px;
     width: 60px;
 }
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 25px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+  }
