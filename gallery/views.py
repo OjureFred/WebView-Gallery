@@ -7,8 +7,8 @@ from .models import Gallery, Location, categories
 # Create your views here.
 def welcome(request):
     pic_categories = categories.objects.all()
-    latest_gallery = Gallery.objects.get(pk = 1)
-    return render( request, 'welcome.html', {"pic_categories": pic_categories, "latest_gallery": latest_gallery})
+    all_gallery = Gallery.objects.all()
+    return render( request, 'welcome.html', {"pic_categories": pic_categories, "all_gallery": all_gallery})
 
 def picture_category(request):
     date = dt.date.today()

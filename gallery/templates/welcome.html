@@ -12,7 +12,8 @@
    {% endfor %}
 </div>
 <div class="container">
-   {{latest_gallery.image_name}}
-   <img src="{{latest_gallery.image}}" />
+   {% for pic  in all_gallery%}
+   {{all_gallery.image_name}}
+   <img src="{{all_gallery.image}}" />
 </div>
 {% endblock %}
