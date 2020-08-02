@@ -12,13 +12,13 @@
   {% endif %}
 
   {% block styles %}
-  {% bootstrap_css %}
+    {% bootstrap_css %}
   {% endblock %}
 
 </head>
 <body>
   {% include 'navbar.html' %}
-    {% block content %} <h1 class="text-center">Pictures for {{date|date:"l d-F Y"}}</h1> {%endblock%}
+    {% block content %} <h1 class="text-center">Fred's  Picture Gallery</h1> {%endblock%}
 
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
