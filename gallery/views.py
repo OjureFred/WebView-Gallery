@@ -29,5 +29,12 @@ def search_results(request):
     
     else:
         message = "You haven't searched for any location"
-        return render(request, 'all-pics/location-pics.html', { "message": message})
+        return render(request, 'all-pics/location-pics.html', {"message": message})
+
+def gallery(request, gallery_id):
+    try:
+        gallery = Gallery.objects.get(id=gallery_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request, "all-pics/gallery.html", {"gallery": gallery})
 

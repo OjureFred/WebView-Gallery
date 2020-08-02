@@ -1,0 +1,26 @@
+{% extends 'all-pics/base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <img src="{{gallery.image.url}}" class="img-responsive" alt="">
+    </div>
+
+    <div class="ro">
+        <h1 class="text-center">{{gallery.image_name}}</h1>
+    </div>
+
+    <div class="row">
+        <p>{{gallery.image_desription}} </p>
+    </div>
+
+    <div class="row">
+        <p>Taken at: {{gallery.location}} taken on: {{gallery.save_date}}</p>
+    </div>
+
+   
+</div>
+
+{% endblock%}
