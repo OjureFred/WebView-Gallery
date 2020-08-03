@@ -6,9 +6,8 @@ from .models import Gallery, Location, categories
 
 # Create your views here.
 def welcome(request):
-    pic_categories = categories.objects.all()
     all_gallery = Gallery.objects.all()
-    return render( request, 'welcome.html', {"pic_categories": pic_categories, "all_gallery": all_gallery})
+    return render( request, 'welcome.html', {"all_gallery": all_gallery})
 
 def picture_category(request):
     date = dt.date.today()
@@ -20,16 +19,16 @@ def picture_location(request):
 
 def search_results(request):
 
-    if 'location' in request.GET and request.GET["location"]:
-        search_term = request.GET.get("location")
-        searched_location = Gallery.search_by_location(search_term)
+    if 'gallery' in request.GET and request.GET["gallery"]:
+        search_term = request.GET.get("gallery")
+        searched_category = Gallery.search_by_category(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-pics/location-pics.html', {"message": message, "pictures": searched_location})
+        return render(request, 'all-pics/category-pics.html', {"message": message, "pictures": searched_category})
     
     else:
-        message = "You haven't searched for any location"
-        return render(request, 'all-pics/location-pics.html', {"message": message})
+        message = "You haven't searched for any category"
+        return render(request, 'all-pics/category-pics.html', {"message": message})
 
 def gallery(request, gallery_id):
     try:
