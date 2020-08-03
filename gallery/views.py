@@ -19,8 +19,8 @@ def picture_location(request):
 
 def search_results(request):
 
-    if 'gallery' in request.GET and request.GET["gallery"]:
-        search_term = request.GET.get("gallery")
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
         searched_category = Gallery.search_by_category(search_term)
         message = f"{search_term}"
 

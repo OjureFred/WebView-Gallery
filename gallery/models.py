@@ -21,7 +21,7 @@ class Gallery(models.Model):
     image_description = models.TextField()
     image = models.ImageField(upload_to = 'pictures/')
     location = models.ForeignKey(Location, default='unknown', on_delete = models.DO_NOTHING)
-    categories = models.ManyToManyField(categories)
+    categories = models.ManyToManyField(categories, related_name='galleries')
     save_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -32,7 +32,7 @@ class Gallery(models.Model):
     
     @classmethod
     def search_by_category(cls, search_term):
-        pictures = cls.objects.filter(categories__icontains=search_term)
+        pictures = cls.objects.filter(categories__category_name__icontains=search_term)
         return pictures
     class Meta:
         ordering = ['image_name']
